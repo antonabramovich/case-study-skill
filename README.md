@@ -9,10 +9,10 @@ times the session from the conversation log, and writes a debrief. See `SKILL.md
 With the [skills.sh](https://skills.sh) CLI:
 
 ```bash
-npx skills add antonabramovich/case-study-skill -g -a claude-code
+npx skills add antonabramovich/case-study-skill --global
 ```
 
-`-g` installs it for all your projects (`~/.claude/skills/`); drop it to install into the current
+`--global` installs it for all your projects (`~/.claude/skills/`); drop it to install into the current
 project only. The repo is private, so the CLI uses your git credentials: you need access to it.
 
 Restart Claude Code, then from inside the project you want to practise run `/case-study`, or
