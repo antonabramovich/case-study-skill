@@ -6,14 +6,17 @@ times the session from the conversation log, and writes a debrief. See `SKILL.md
 
 ## Install
 
-Clone it into your personal skills folder:
+With the [skills.sh](https://skills.sh) CLI:
 
 ```bash
-git clone https://github.com/antonabramovich/case-study-skill.git ~/.claude/skills/case-study
+npx skills add antonabramovich/case-study-skill -g -a claude-code
 ```
 
-On Windows that is `%USERPROFILE%\.claude\skills\case-study`. Restart Claude Code, then from
-inside the project you want to practise run `/case-study`, or say "interview me about this project".
+`-g` installs it for all your projects (`~/.claude/skills/`); drop it to install into the current
+project only. The repo is private, so the CLI uses your git credentials: you need access to it.
+
+Restart Claude Code, then from inside the project you want to practise run `/case-study`, or
+say "interview me about this project".
 
 Requires Node 18+ for the timing script. Sessions are saved to `~/.claude/case-study/<project>/`.
 
